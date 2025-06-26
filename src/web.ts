@@ -7,7 +7,7 @@ export class FacebookAppEventsWeb extends WebPlugin implements FacebookAppEvents
     throw new Error('Method not implemented.');
   }
 
-  init(options: { appId: string; clientToken: string }): Promise<void> {
+  initialize(options: { appId: string; clientToken: string }): Promise<void> {
     throw new Error('Method not implemented.');
   }
   isInitialized(): Promise<{ initialized: boolean }> {

@@ -35,7 +35,7 @@ public class FacebookAppEventsPlugin extends Plugin {
 
 
     @PluginMethod
-    public void init(PluginCall call) {
+    public void initialize(PluginCall call) {
         String facebookAppId = call.getString("appId");
         String facebookClientToken = call.getString("clientToken");
 

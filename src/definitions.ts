@@ -1,6 +1,6 @@
 export interface FacebookAppEventsPlugin {
   echo(options: { value: string }): Promise<{ value: string }>;
-  init(options: { appId: string; clientToken: string }): Promise<void>;
+  initialize(options: { appId: string; clientToken: string }): Promise<void>;
   isInitialized(): Promise<{ initialized: boolean }>;
   logEvent(options: LogAppEventOptions): Promise<void>;
 }
