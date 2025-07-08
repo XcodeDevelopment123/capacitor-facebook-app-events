@@ -20,12 +20,14 @@
 npm init @capacitor/plugin
 ```
 
+![Init image](./Screenshot%202025-07-08%20130606.png)
+
 按提示填写基本信息：
 
 - Plugin name: facebook-app-events
 - npm package name: capacitor-facebook-app-events
 - description: Facebook App Events integration
-  ![Init image](./Screenshot%202025-07-08%20130606.png)
+
   > 📚 **参考文档**：详细的插件创建流程请参考 [Capacitor 官方文档](https://capacitorjs.com/docs/plugins/creating-plugins)
 
 ## 三、定义插件接口
@@ -41,12 +43,12 @@ export interface FacebookAppEventsPlugin {
 编辑 `src/index.ts`：
 
 ```typescript
-import { registerPlugin } from "@capacitor/core";
-import type { FacebookAppEventsPlugin } from "./definitions";
+import { registerPlugin } from '@capacitor/core';
+import type { FacebookAppEventsPlugin } from './definitions';
 
-const FacebookAppEvents = registerPlugin<FacebookAppEventsPlugin>("FacebookAppEvents");
+const FacebookAppEvents = registerPlugin<FacebookAppEventsPlugin>('FacebookAppEvents');
 
-export * from "./definitions";
+export * from './definitions';
 export { FacebookAppEvents };
 ```
 
@@ -113,12 +115,12 @@ npx cap sync
 ### 调用示例
 
 ```typescript
-import { FacebookAppEvents } from "capacitor-facebook-app-events";
+import { FacebookAppEvents } from 'capacitor-facebook-app-events';
 
 // 记录自定义事件
 FacebookAppEvents.logEvent({
-  name: "custom_event_name",
-  params: { user_id: "123", action: "click" },
+  name: 'custom_event_name',
+  params: { user_id: '123', action: 'click' },
 });
 ```
 
