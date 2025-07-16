@@ -1,0 +1,672 @@
+{
+  "api": {
+    "name": "FacebookAppEventsPlugin",
+    "slug": "facebookappeventsplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "initialize",
+        "signature": "(options: FacebookInitializeOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "FacebookInitializeOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "FacebookInitializeOptions"
+        ],
+        "slug": "initialize"
+      },
+      {
+        "name": "isInitialized",
+        "signature": "() => Promise<{ initialized: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ initialized: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isinitialized"
+      },
+      {
+        "name": "logEvent",
+        "signature": "(options: LogEventOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "LogEventOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "LogEventOptions"
+        ],
+        "slug": "logevent"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "FacebookInitializeOptions",
+      "slug": "facebookinitializeoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "appId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "clientToken",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "LogEventOptions",
+      "slug": "logeventoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "eventName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "FacebookEventName"
+          ],
+          "type": "FacebookEventName"
+        },
+        {
+          "name": "valueToSum",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "parameters",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "FacebookEventParams",
+            "Record"
+          ],
+          "type": "(FacebookEventParams & Record<string, any>) | undefined"
+        }
+      ]
+    },
+    {
+      "name": "FacebookEventParams",
+      "slug": "facebookeventparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "live_streaming_prev_status",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "live_streaming_status",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "live_streaming_error",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_registration_method",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_content_type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_content",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_content_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_search_string",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_success",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'1' | '0' | undefined"
+        },
+        {
+          "name": "fb_max_rating_value",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_payment_info_available",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'1' | '0' | undefined"
+        },
+        {
+          "name": "fb_num_items",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "fb_level",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_description",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_mobile_launch_source",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_mobile_pckg_fp",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_mobile_app_cert_hash",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "_valueToSum",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "ad_type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_order_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_custom_label_0",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_custom_label_1",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_custom_label_2",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_custom_label_3",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_custom_label_4",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_category",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ios_url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ios_app_store_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ios_app_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_iphone_url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_iphone_app_store_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_iphone_app_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ipad_url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ipad_app_store_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_ipad_app_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_android_url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_android_package",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_android_app_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_windows_phone_url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_windows_phone_app_id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "fb_product_applink_windows_phone_app_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "FacebookStandardEvents",
+      "slug": "facebookstandardevents",
+      "members": [
+        {
+          "name": "ACTIVATED_APP",
+          "value": "'fb_mobile_activate_app'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DEACTIVATED_APP",
+          "value": "'fb_mobile_deactivate_app'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SESSION_INTERRUPTIONS",
+          "value": "'fb_mobile_app_interruptions'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "TIME_BETWEEN_SESSIONS",
+          "value": "'fb_mobile_time_between_sessions'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "COMPLETED_REGISTRATION",
+          "value": "'fb_mobile_complete_registration'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "VIEWED_CONTENT",
+          "value": "'fb_mobile_content_view'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SEARCHED",
+          "value": "'fb_mobile_search'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "RATED",
+          "value": "'fb_mobile_rate'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "COMPLETED_TUTORIAL",
+          "value": "'fb_mobile_tutorial_completion'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "PUSH_TOKEN_OBTAINED",
+          "value": "'fb_mobile_obtain_push_token'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ADDED_TO_CART",
+          "value": "'fb_mobile_add_to_cart'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ADDED_TO_WISHLIST",
+          "value": "'fb_mobile_add_to_wishlist'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "INITIATED_CHECKOUT",
+          "value": "'fb_mobile_initiated_checkout'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ADDED_PAYMENT_INFO",
+          "value": "'fb_mobile_add_payment_info'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "PURCHASED",
+          "value": "'fb_mobile_purchase'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "ACHIEVED_LEVEL",
+          "value": "'fb_mobile_level_achieved'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "UNLOCKED_ACHIEVEMENT",
+          "value": "'fb_mobile_achievement_unlocked'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SPENT_CREDITS",
+          "value": "'fb_mobile_spent_credits'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CONTACT",
+          "value": "'Contact'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "CUSTOMIZE_PRODUCT",
+          "value": "'CustomizeProduct'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DONATE",
+          "value": "'Donate'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "FIND_LOCATION",
+          "value": "'FindLocation'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SCHEDULE",
+          "value": "'Schedule'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "START_TRIAL",
+          "value": "'StartTrial'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SUBMIT_APPLICATION",
+          "value": "'SubmitApplication'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SUBSCRIBE",
+          "value": "'Subscribe'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "AD_IMPRESSION",
+          "value": "'AdImpression'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "AD_CLICK",
+          "value": "'AdClick'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_START",
+          "value": "'fb_sdk_live_streaming_start'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_STOP",
+          "value": "'fb_sdk_live_streaming_stop'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_PAUSE",
+          "value": "'fb_sdk_live_streaming_pause'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_RESUME",
+          "value": "'fb_sdk_live_streaming_resume'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_ERROR",
+          "value": "'fb_sdk_live_streaming_error'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "LIVE_STREAMING_UPDATE_STATUS",
+          "value": "'fb_sdk_live_streaming_update_status'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "PRODUCT_CATALOG_UPDATE",
+          "value": "'fb_mobile_catalog_update'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "FacebookEventName",
+      "slug": "facebookeventname",
+      "docs": "",
+      "types": [
+        {
+          "text": "FacebookStandardEvents",
+          "complexTypes": [
+            "FacebookStandardEvents"
+          ]
+        },
+        {
+          "text": "(string & {})",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "Record",
+      "slug": "record",
+      "docs": "Construct a type with a set of properties K of type T",
+      "types": [
+        {
+          "text": "{\r\n    [P in K]: T;\r\n}",
+          "complexTypes": [
+            "K",
+            "T"
+          ]
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
